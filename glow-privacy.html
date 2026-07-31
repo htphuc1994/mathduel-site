@@ -28,56 +28,83 @@
 <div class="hero"><div class="wrap"><h1>Glow — Privacy Policy</h1>
   <p>Beautiful selfies, edited privately on your device.</p></div></div>
 <main class="wrap">
-  <p class="dim">Last updated: 30 July 2026</p>
+  <p class="dim">Last updated: 31 July 2026</p>
 
-  <div class="tl"><strong>The short version:</strong> Glow does all editing <strong>on your device</strong>.
-  We do <strong>not</strong> collect, upload, sell, or share your photos or any personal data. There are no
-  accounts, no ads, and no third-party tracking.</div>
+  <div class="tl"><strong>The short version:</strong> Glow edits photos locally on your device.
+  Glow’s developer does not receive your photos, face data, or other personal information. Glow has
+  no accounts, advertising, analytics, or tracking. Photo and face processing does not use a network
+  connection. Apple services and destinations that you explicitly choose, such as StoreKit, iCloud
+  Photos, or an app selected from the system share sheet, operate under their own settings and
+  privacy policies.</div>
 
-  <h2>What we collect</h2>
-  <p><strong>Nothing.</strong> Glow has no user accounts and includes no analytics, advertising, or tracking
-  SDKs. We do not build a profile of you and we have no servers that receive your data.</p>
+  <h2 id="collection">What Glow collects</h2>
+  <p><strong>Glow’s developer collects no data from the app.</strong> We operate no account system or
+  backend that receives user photos, face data, editing activity, device identifiers, or subscription
+  details. Glow includes no advertising, analytics, telemetry, or tracking SDKs.</p>
 
-  <h2>Your photos &amp; camera</h2>
+  <h2 id="photos-exports">Photos, camera &amp; exports</h2>
   <ul>
-    <li>Photos you pick, and any photo you take with the camera, are processed <strong>entirely on your
-      device</strong>. They are never uploaded to us or anyone else.</li>
-    <li>All features — adjustments, filters, background removal, retouch, reshaping, upscaling, face effects —
-      run locally using your device’s own capabilities.</li>
-    <li>Photo-library and camera access are requested only when you use a feature that needs them, and are used
-      solely to let you import and save your own images.</li>
-    <li>An edited image is saved to your photo library only when <em>you</em> choose to export it.</li>
+    <li>A photo you select or take is decoded into a temporary working copy and processed locally on
+      your device. Glow does not upload it to us or to an AI, analytics, or advertising service.</li>
+    <li>Your original image remains in the location from which you selected it. Apple Photos and
+      iCloud Photos may retrieve or synchronize that image according to your device and Apple account
+      settings; Glow does not control those services.</li>
+    <li>When you tap <em>Export</em>, Glow passes the final edited image to the iOS system share sheet.
+      You decide whether to save it to Photos or send it to another app or service. A destination you
+      select may store or upload the image under its own privacy policy. Glow does not automatically
+      select a destination or receive a copy.</li>
+    <li>The exported image contains the final image pixels only. Glow does not attach its temporary
+      face rectangles or landmark coordinates to the exported file.</li>
   </ul>
 
-  <h2>Face &amp; biometric data</h2>
-  <p>Some Glow features — portrait retouch, reshaping, and face effects — need to locate the face in your
-  photo. Glow does this <strong>entirely on your device</strong> using your operating system’s built-in
-  on-device vision capabilities (e.g. Apple’s Vision framework) and, where applicable, on-device models
-  bundled inside the app. Glow detects the position of facial features only to apply the edit you choose. Glow
-  <strong>does not create a faceprint or biometric identifier, does not recognize or identify you</strong>, and
-  does not use face data for any other purpose.</p>
-  <p>This face data exists <strong>only in memory</strong> during your editing session; it is <strong>never
-  saved by Glow, never uploaded, and never shared</strong>, and it is discarded when you finish or close the
-  app. Glow has no servers and makes no network connections, so your photos and face data never leave your
-  device. The only thing saved is the final edited image, and only when <em>you</em> choose to export it to
-  your own photo library (which you can delete anytime in Photos). Because Glow stores no face data, there is
-  nothing for us to retain, share, or delete on your behalf.</p>
+  <h2 id="face-data">Face data and on-device processing</h2>
+  <p>Glow does not collect or transmit face data off your device. When a selected photo contains a
+  face, Apple’s on-device Vision framework may temporarily create a face observation. Glow reads only
+  face bounding rectangles and approximate positions of the left eye, right eye, and nose. These
+  positions are used only to anchor face effects and reshape controls and to help distinguish the main
+  subject from other people in the Clean People feature.</p>
 
-  <h2>Subscriptions &amp; payments</h2>
-  <p>Glow offers an optional auto-renewable subscription. Purchases are handled entirely by the
-  <strong>Apple App Store</strong> under your Apple ID — we never see or store your payment details. Your
-  subscription status is verified on-device with the App Store. Manage or cancel anytime in your device’s
-  Settings; billing terms are shown before you buy.</p>
+  <p>Portrait smoothing uses local pixel and color processing. If you enable Enhance, a fixed Core ML
+  model bundled inside the app may process the pixels of the entire edited image, including any face
+  visible in it. Apple Vision, Core ML, and the bundled model all execute on the device. Glow does not
+  create faceprints, embeddings, biometric templates, recognize or identify anyone, compare faces,
+  authenticate users, or infer identity or sensitive characteristics. User photos and face data are
+  never used to train or improve a model.</p>
+
+  <h2 id="storage-retention">Storage, retention &amp; deletion</h2>
+  <p>Glow’s app code does not write the working photo, Vision face observations, face coordinates,
+  masks, or edit anchors to app files, persistent browser storage, logs, a developer server, or a cloud database.
+  They may remain in volatile app memory while the Glow process is running, including while the app is
+  temporarily suspended. When another photo is loaded, the previous working state is replaced and
+  becomes eligible for memory release. All remaining working data is released when the app process
+  terminates.</p>
+
+  <p>Because we never receive this data, we have no server copy to retain or delete. You control the
+  original photo and any exported image and can delete them from Photos or from the destination you
+  selected. Force-quitting Glow terminates its current in-memory editing process.</p>
+
+  <h2 id="third-parties-network">Third-party AI, sharing &amp; network use</h2>
+  <p>Glow does not use an external or remote third-party AI provider or API. It does not send photos,
+  face data, or other personal information to an AI provider. Image processing uses Apple Vision,
+  Apple Core ML, local WebGL processing, and a fixed model bundled in the app. All processing executes
+  on the device, and no AI provider receives the input or result.</p>
+
+  <p>Photo and face processing makes no network requests. StoreKit may contact Apple to load products,
+  verify entitlements, complete purchases, restore purchases, and manage subscriptions. Privacy and
+  Terms links open in your browser. Apple Photos, iCloud, and a share-sheet destination may communicate
+  over the network only according to your settings or explicit destination choice. None of these flows
+  sends face rectangles or landmark coordinates to Glow’s developer.</p>
+
+  <h2 id="subscriptions">Subscriptions &amp; payments</h2>
+  <p>Glow offers an optional auto-renewable subscription. Purchases are handled by Apple through
+  StoreKit under your Apple ID. Glow may receive product availability and an on-device entitlement
+  status, but we do not receive or store your Apple ID or payment details, and no subscription
+  information is sent to a developer server.</p>
 
   <h2>Information stored on your device</h2>
-  <p>Glow keeps only small preferences on your device (such as your chosen language and a cached subscription
-  status). This never leaves your device and is not personal information. Your original photo and edits exist
-  only in memory during an editing session unless you export.</p>
-
-  <h2>Third parties</h2>
-  <p>Glow bundles no third-party advertising, analytics, or tracking services. On-device processing may use
-  your operating system’s built-in image features (e.g. Apple’s on-device Vision framework); these also run
-  locally and send nothing to us.</p>
+  <p>Glow persistently stores only small local preferences: your chosen language and a cached Boolean
+  indicating whether Premium was active. These values contain no photo or face data and are not sent
+  to us.</p>
 
   <h2>Children</h2>
   <p>Glow is a general-audience app and collects no personal data from anyone, including children.</p>
