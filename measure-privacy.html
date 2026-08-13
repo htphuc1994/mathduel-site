@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Measure — Privacy Policy</title>
+<style>
+  :root{ --deep:#1c2c4e; --dark:#0c121e; --amber:#ffd60a; --ink:#151a24; --dim:#5a6376; --line:#e6eaf2; }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
+    color:var(--ink);line-height:1.65;background:#fff}
+  .hero{background:linear-gradient(160deg,var(--deep),var(--dark));color:#fff;padding:48px 24px}
+  .wrap{max-width:720px;margin:0 auto;padding:0 24px}
+  h1{margin:0;font-size:30px;letter-spacing:.3px}
+  .hero p{margin:6px 0 0;opacity:.9}
+  .hero strong{color:var(--amber);font-weight:700}
+  main{padding:34px 0 60px}
+  h2{font-size:19px;margin:28px 0 8px}
+  p,li{color:var(--ink)}
+  .dim{color:var(--dim)}
+  .tl{background:#f6f8fc;border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:18px 0}
+  ul{padding-left:20px}
+  a{color:var(--deep)}
+  table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px}
+  th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+  th{background:#f6f8fc;font-weight:600}
+  footer{border-top:1px solid var(--line);padding:22px 0;color:var(--dim);font-size:14px}
+  code{background:#f1f3f9;padding:1px 6px;border-radius:6px}
+  @media (max-width:430px){
+    table{font-size:14px}
+    th,td{padding:8px 9px}
+  }
+</style>
+</head>
+<body>
+<div class="hero"><div class="wrap"><h1>Measure — Privacy Policy</h1>
+  <p>Real millimetres, measured <strong>entirely on your iPhone</strong>.</p></div></div>
+<main class="wrap">
+  <p class="dim">Last updated: 13 August 2026</p>
+
+  <div class="tl"><strong>The short version:</strong> Measure does all of its measuring
+  <strong>on your device</strong>. We do <strong>not</strong> collect, upload, sell, or share your camera
+  frames, photos, room scans, measurements, or any personal data. There are no accounts, no ads, and no
+  third-party analytics or tracking. Measuring works with no network connection at all.</div>
+
+  <h2>What we collect</h2>
+  <p><strong>Nothing.</strong> Measure has no user accounts and no sign-in, and includes no analytics,
+  advertising, or tracking SDKs. We operate no servers that could receive your data, and we do not build a
+  profile of you.</p>
+
+  <h2>Camera</h2>
+  <ul>
+    <li>Live measuring needs the camera, so the app can see the surface you are pointing at and read the
+      distance to it. Camera access is requested the first time you use it.</li>
+    <li>Camera frames and depth readings are used <strong>in memory only</strong>, to work out the length you
+      asked for. They are <strong>not recorded, not saved to your device, and never uploaded</strong>, and they
+      are discarded as the session continues.</li>
+    <li>Measure adds nothing to your photo library, and takes no photographs of its own while you measure. The
+      one exception is the optional sensor check (<em>This iPhone → Sensors</em>): it captures a single still
+      from each of this iPhone's depth-capable cameras purely to find out what depth data that camera actually
+      returns. Those stills are examined <strong>in memory and then discarded</strong> — never saved to your
+      device, never added to your photo library, and never sent anywhere.</li>
+  </ul>
+
+  <h2>Photos you choose</h2>
+  <ul>
+    <li>Measuring a photo uses Apple's own system photo picker, which needs <strong>no photo-library
+      permission at all</strong>. Measure receives <strong>only the single image you pick</strong>; the rest of
+      your library is never handed to the app.</li>
+    <li>From that image it reads the picture itself, any depth data it carries, and the camera calibration
+      recorded by the device that took it. All of this is read <strong>on your device, in memory</strong>, and
+      only to produce the measurement you asked for.</li>
+    <li>The optional sensor check is the one place Measure asks for access to your photo library, and only if
+      you tap <em>Run</em> and allow it. It counts how many photos your library holds and how many of those are
+      depth-effect photos, then reads up to 40 of the most recent depth-effect photos <strong>in memory</strong>
+      to see whether their depth is accurate enough to measure with. Only the resulting counts are kept, in the
+      on-device report described below — no photo is copied, saved, or uploaded.</li>
+    <li>Measure never modifies, deletes, or writes anything to your photo library.</li>
+  </ul>
+
+  <h2>Room scans</h2>
+  <p>A room scan builds an approximate model of walls, doors and floor area using your device's own scanner.
+  The model is created and used <strong>entirely on your device</strong> for the duration of the scan. It is
+  not uploaded and not shared.</p>
+
+  <h2>What is stored on your device</h2>
+  <p>Measure keeps a small amount of information inside its own private app storage, on your device only:</p>
+  <ul>
+    <li>your chosen language, and whether you have seen the help screen;</li>
+    <li>measurements you choose to save, including any note you type on them — the free version keeps the
+      three most recent, and Measure Pro keeps them all;</li>
+    <li>a calibration record, if you run the accuracy check;</li>
+    <li>a diagnostic report, if you run the optional sensor check. It lists what this device can do — its
+      model identifier (for example <code>iPhone15,3</code>), the iOS build, how much memory it has, which
+      depth formats its cameras support — plus the two counts from your photo library described above. It
+      contains no photos, no measurements, and nothing that identifies you.</li>
+  </ul>
+  <p>None of this leaves your device unless you send it yourself. Measure has three explicit Share buttons:
+  export your saved measurements as a CSV file (date, length, ± tolerance, method, source and any note you
+  wrote), share the calibration record, or share the diagnostic report. Each one does something only when
+  <em>you</em> tap it and choose where the file goes — iOS hands it over, not Measure, and we never receive a
+  copy. Everything above is removed if you delete the app. Because we never receive any of it, there is nothing
+  for us to retain, correct, share, or delete on your behalf.</p>
+
+  <h2>Subscriptions &amp; payments</h2>
+  <p>Measure is free to use for live measuring. Measure Pro is an optional purchase — monthly or yearly
+  auto-renewable plans, or a single lifetime payment. Purchases are handled entirely by the
+  <strong>Apple App Store</strong> under your Apple ID: <strong>we never see or store your payment
+  details</strong>. Your entitlement is checked on-device with the App Store. Billing terms are shown before
+  you buy, and you can manage or cancel a subscription at any time in your device's Settings.</p>
+
+  <h2>Network connections</h2>
+  <p>Measure makes <strong>no network connections of its own</strong>, to us or to anyone else. Measuring
+  works fully offline, including in airplane mode. The only network activity involved is Apple's own App Store
+  communication when you buy, restore, or verify Measure Pro, and — if you tap them — the privacy and terms
+  links, which open in your browser.</p>
+
+  <h2>Permissions, and exactly what each is for</h2>
+  <table>
+    <tr><th>Permission</th><th>When it is asked</th><th>What it is used for</th></tr>
+    <tr><td>Camera</td><td>The first time you use live measuring or a room scan, and again if you run the
+      optional sensor check</td>
+      <td>To see and range the surface you are measuring. Frames stay in memory and are never saved or sent;
+      the sensor check's two stills are discarded once it has read the sensor's numbers.</td></tr>
+    <tr><td>Photos</td><td>Only if you run the optional sensor check — a photo you pick to measure needs no
+      photo access at all</td>
+      <td>To report how much of your library could be measured: it counts your photos and reads the depth
+      channel of up to 40 recent depth-effect photos, on your device. Nothing is copied out, changed, or
+      written back to your library.</td></tr>
+  </table>
+
+  <h2>Third parties</h2>
+  <p>Measure bundles no third-party advertising, analytics, tracking, or cloud services, and sends nothing to
+  any third party. The only external party involved at all is Apple, which processes purchases as described
+  above under Apple's own privacy policy.</p>
+
+  <h2>Children</h2>
+  <p>Measure is a general-audience utility, rated 4+, and collects no personal data from anyone, including
+  children. It contains no ads, no external advertising links, and no communication features.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, we will update this page and revise the date above.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy, or need help? Email
+  <a href="mailto:htphuc.cs@gmail.com">htphuc.cs@gmail.com</a> or visit our
+  <a href="https://htphuc1994.github.io/mathduel-site/support.html">support page</a>.</p>
+
+  <footer>© 2026 Measure. Terms of use are governed by the Apple Standard EULA:
+  <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">apple.com/legal/…/stdeula</a>.</footer>
+</main>
+</body>
+</html>
