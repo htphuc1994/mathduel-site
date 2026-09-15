@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CAD Viewer — Privacy Policy</title>
+<style>
+body{margin:0;padding:2rem 1.25rem;background:#101c27;color:#e7eff7;
+ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Helvetica,Arial,sans-serif;
+ line-height:1.6;max-width:44rem;margin-inline:auto}
+h1{font-size:1.8rem;margin-bottom:.2em} h2{font-size:1.15rem;margin-top:1.8em}
+.tag{color:#90a6bc;margin-top:0} a{color:#57b0ff}
+code{background:#1a2836;padding:.1em .35em;border-radius:4px;font-size:.9em}
+footer{margin-top:2.5rem;font-size:.9rem;color:#90a6bc;border-top:1px solid #23384f;padding-top:1rem}
+</style></head><body>
+<h1>CAD Viewer — Privacy Policy</h1>
+<p class="tag">Last updated: 15 September 2026</p>
+
+<h2>The short version</h2>
+<p><strong>CAD Viewer collects no data at all.</strong> There is no account, no sign-in, no
+analytics, no advertising, no tracking and no third-party SDK of any kind. The models you open are
+never uploaded and never seen by anyone but you. The app asks for no permissions — not the camera,
+not photos, not location, not contacts, not notifications — because it needs none.</p>
+
+<h2>Your files stay on your device</h2>
+<p>CAD Viewer is a read-only viewer. When you open a model it reads <strong>your original file
+where it already is</strong>, and only while you are looking at it. Every format — STEP, IGES, IFC,
+DXF, glTF, USD, STL, point clouds, G-code and the rest — is parsed and drawn on your device by code
+that ships inside the app.</p>
+<p>Your original file is never written to, renamed, moved or deleted. The app asks iOS for
+permission to read the file you chose, and hands that permission back when the file has loaded.</p>
+<p><strong>It reads the one file you picked, and does not go looking through the folder around
+it.</strong> Once a file is open, the app's parsers are working on that file's bytes and have no
+way to reach another. A glTF file that points at a separate <code>.bin</code> on the internet is
+<em>refused with an explanation</em> rather than fetched.</p>
+<p>One thing worth knowing is iOS's doing rather than ours: when another app sends you a file it
+cannot share in place, iOS itself puts a copy in CAD Viewer's <code>Inbox</code> folder and hands
+the app that. CAD Viewer neither creates nor deletes those; they go when you delete the app.</p>
+
+<h2>When you save a copy</h2>
+<p>Tapping <em>Save a copy in the app</em> is the only thing that makes CAD Viewer copy your file,
+and it only ever copies it into the app's own storage on the same device. A saved copy:</p>
+<ul>
+  <li><strong>stays until you delete it</strong> — closing the model, quitting the app and updating
+      the app all leave it alone;</li>
+  <li>keeps its original filename, and never overwrites an existing one (a second
+      <code>part.stp</code> becomes <code>part (2).stp</code>);</li>
+  <li>can be deleted from inside the app, one at a time or all at once, which deletes the real
+      file;</li>
+  <li><strong>is visible in the Files app</strong> under CAD Viewer, and over a USB connection to a
+      computer. That is deliberate — it is how you get a file back out — but it does mean anyone
+      with your unlocked device, or a computer you have trusted, can read it.</li>
+</ul>
+
+<h2>What else stays on your device</h2>
+<p>CAD Viewer keeps a few small things in its own storage, all local to your device:</p>
+<ul>
+  <li><strong>Recent files</strong> — for up to twelve files: the filename, the date you opened it,
+      how many triangles, line segments or points it held, and a bookmark so a tap can reopen it.
+      A bookmark is a handle iOS issues for a file you already chose; it records where the file is,
+      not what is in it. <em>Clear</em> on the first screen removes the list and its bookmarks.</li>
+  <li><strong>Your viewer preferences</strong> — the default background, and whether auto-rotate
+      starts on.</li>
+  <li><strong>Your chosen language</strong>, if you picked one instead of following the device.</li>
+  <li><strong>A count of how many files you have opened today</strong>, and the day it refers to.
+      Two integers: no filenames, no paths, no history.</li>
+</ul>
+<p>The app writes no flag of its own about whether you have paid — it asks the App Store's
+on-device record each time. Deleting the app removes everything above, together with any copies you
+saved. (iOS's <em>Offload App</em> is different: it removes the app and deliberately keeps its
+documents and data.)</p>
+
+<h2>Backups</h2>
+<p>Saved copies live in the app's Documents folder and the settings above live in its preferences,
+so <strong>both are included in your device's backup</strong> if you use one — exactly as your
+other apps' documents are. CAD Viewer does not exclude them, and it never uploads anything itself:
+a backup is made by your device, not by this app.</p>
+<p>With iCloud Backup on, those copies are stored in your iCloud account. With a Finder or iTunes
+backup they are stored on your computer, and are only encrypted there if you tick <em>Encrypt local
+backup</em>. You can stop this app being backed up at all in <em>Settings → your name → iCloud →
+Manage Account Storage → Backups</em>.</p>
+
+<h2>Network use</h2>
+<p>CAD Viewer contains no networking code of its own — no URL loading, no sockets, no web view.
+Opening and reading a model contacts nothing, and the app works fully in airplane mode.</p>
+<p>There is one exception, and it is Apple's rather than ours: <strong>the App Store's in-app
+purchase system (StoreKit)</strong>. To be exact about when it happens —</p>
+<ul>
+  <li><strong>at launch</strong>, the app asks for the current price of the unlock in your local
+      currency, so the purchase screen can show a real price instead of a guess. This happens
+      whether or not you ever open that screen, and it fails quietly with no connection;</li>
+  <li>when you <em>buy</em>, or tap <em>Restore Purchase</em>;</li>
+  <li>in the background, the app keeps a listener open so a purchase made on another device, or a
+      refund, reaches it without waiting for the next launch.</li>
+</ul>
+<p>We never see your payment details, your Apple Account, or any identifier tied to you. Those
+transactions are handled entirely by Apple under
+<a href="https://www.apple.com/legal/privacy/">Apple's own privacy policy</a>; the app reads only
+which product was bought and whether it was refunded. Nothing about your files is ever sent
+anywhere, by this app or by anything in it.</p>
+<p>One more piece of iOS behaviour to be straight about: if the file you open is stored in iCloud
+Drive or another cloud provider rather than on the device, the system downloads it before the app
+can read it. That is the provider's transfer, not ours, and it is the same thing that happens when
+you open the file in any other app.</p>
+
+<h2>Purchases</h2>
+<p>CAD Viewer is free to use, and every feature is free: opening, viewing, measuring, section
+views, saving copies, all eleven languages and every supported format. What the free tier limits is
+<strong>how many files you may open in a day — one</strong>. The count resets at midnight, local
+time. The sample models bundled with the app never count against it, and a file the app fails to
+read does not count either.</p>
+<p><strong>CAD Viewer Pro</strong> removes that limit. It is a <strong>single one-time
+purchase</strong>, not a subscription: nothing renews, there is nothing to cancel, and payment is
+charged once to your Apple Account at confirmation. If you reinstall or change device,
+<em>Restore Purchase</em> brings it back at no cost.</p>
+<p>Whether you have paid is verified on your device, against a signed record the App Store keeps
+there — which is why the app stays unlocked with no signal, and why a refund re-locks it.</p>
+<p>Terms of Use: <a
+href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple's Standard End User
+License Agreement</a>.</p>
+
+<h2>Children</h2>
+<p>CAD Viewer is a tool for people who work with CAD files and is not directed at children, though
+it is rated 4+ because there is nothing in it that would not be. It contains no advertising, no
+user accounts, no user-generated content, no chat, no links out of the app and no data collection.
+The optional purchase is handled entirely by the App Store, which applies its own parental
+controls.</p>
+
+<h2>Your rights</h2>
+<p>Because no personal data is collected or transmitted, there is nothing for us to disclose,
+correct, export or delete — we have nothing of yours. Everything the app keeps is on your device,
+under your control, and is removed when you delete it.</p>
+
+<h2>Changes</h2>
+<p>If this policy ever changes, the updated version will be posted here with a new date.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy, or need help? Email
+<a href="mailto:htphuc.cs@gmail.com">htphuc.cs@gmail.com</a> or visit the
+<a href="https://htphuc1994.github.io/mathduel-site/support.html">support page</a>.</p>
+
+<footer>CAD Viewer — an offline viewer for STEP, IGES, IFC, DXF, glTF, USD, STL, point clouds and
+G-code, for iPhone and iPad. Everything it does, it does on your device.</footer>
+</body></html>
